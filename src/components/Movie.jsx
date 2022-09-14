@@ -6,7 +6,7 @@ import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 
 const Movie = ({ movie, id }) => {
   const [like, setLike] = useState(false);
-  const [saved, setSaved] = useState(false);
+  // const [saved, setSaved] = useState(false);
   const { user } = UserAuth();
 
   const movieID = doc(db, 'users', `${user?.email}`)
@@ -14,7 +14,7 @@ const Movie = ({ movie, id }) => {
   const saveShow = async () => {
     if (user?.email) {
       setLike(!like)
-      setSaved(true)
+      // setSaved(true)
       await updateDoc(movieID, {
         savedShows: arrayUnion({
           id: movie.id,

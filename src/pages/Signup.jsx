@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext';
 
 function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { user, signUp } = UserAuth();
+  const { signUp } = UserAuth();
 
   const navigate = useNavigate();
 
@@ -19,12 +19,6 @@ function Signup() {
       console.log(error)
     }
   }
-
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate('/');
-  //   }
-  // }, [user, navigate])
 
 
   return (

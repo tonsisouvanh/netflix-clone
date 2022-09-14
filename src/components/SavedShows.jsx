@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import { UserAuth } from "../context/AuthContext";
